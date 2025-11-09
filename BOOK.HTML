@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>room booking</title>
+
+<style>
+    body{
+       background:linear-gradient(to bottom,#150b31,#200b09);    
+        padding: 0;    
+        margin: 0;
+        background-blend-mode: multiply;
+        align-items: center;
+        display: flex   ;
+        flex-direction: column;
+        min-height: 100vh;
+        margin-top: 0;
+        padding-top: 0;    
+        transition: all 0.8s ease-in-out;
+        background-image: ();
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    form {
+        box-sizing: border-box;
+        border-radius: 10px;
+        width: 40%;
+        background:linear-gradient(to left,#0f0f50,#564979);
+        padding: 1rem;
+        align-items: center;
+        box-sizing: 0 0 15px;
+        animation: glow 2s infinite alternate;
+        transition: all 0.8s ease-in-out;
+        backdrop-filter: blur(40px);
+        
+        
+
+    }
+    h2{
+        text-align: center;
+        color: linear-gradient(to right, #c92b7a, #f80303);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+
+    }
+    fieldset{
+        border: none;
+        margin-bottom: 0;
+        padding: 0;
+
+    }
+    input{
+        width: 85%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+    #post{
+        width: 65%;
+        padding: 0.7rem;
+        margin-top: 1rem;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(to right, #c92b7a, #f80303);
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-left: 17.5%;        
+        
+
+    }
+    sup{
+        color: red;
+        font-size: smaller;
+
+    }
+    header{
+        width: 100%;
+         background: linear-gradient(to left,#150b31,#200b09);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-left: 25%;
+        width: 50%;
+        border-radius: 0.625rem;
+        background-color: white;
+        height: 2rem;
+
+    }   
+    nav a{
+        color: black;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 1rem;
+
+    }
+    nav a:hover{
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+    }
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 5px #330432, 0 0 15px #3a0239, 0 0 30px #30042f, 0 0 40px #2c022b;
+        }
+        to {
+            box-shadow: 0 0 20px #380437, 0 0 30px #2e022d, 0 0 40px #3a0239, 0 0 50px #330232;
+        }
+    }
+    @media (max-width: 768px) {
+        form {
+            width: 60%;
+        }
+        nav a{
+            font-size: 0.9rem;
+            padding-left: 0.15rem
+        }
+    nav{
+        width: 80%;
+        margin-left: 7.5%;
+
+        }
+        #sign{
+    margin-left: 85%;
+    font-size: 10px;
+     margin-top: -1rem;       
+
+}
+        
+        
+        
+    }
+    select{
+        width: 66%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        height: 1.8rem;
+
+
+    }
+    label{
+        font-weight: 700;
+        font-size: 0.8rem;
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 0.5rem;
+
+    }
+#sign{
+    position: absolute;
+    right: 2rem;
+   margin-top: -1rem;
+    padding: 0.5rem 1rem;
+    background-color: #03b0f5;
+    color: white;
+    border: none;
+    border-radius: 0.925rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 5px #03b0f5;
+     right: 1rem;
+        top: 3.2rem;
+        padding: 0.2rem;
+    display: block;
+
+}
+.profile{
+    margin-left: 92%;
+    margin-top: -1.82rem;
+    margin-bottom: 1rem;
+    width: 2rem;    
+    height: 2rem;
+    overflow: hidden;
+    border-radius: 50%;
+
+
+
+}
+image{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%; 
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+    <header>
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="BOOK.HTML">Book</a>
+    <a href="RENT.HTML">Pay</a>
+    <a href="HOUSE.HTML">House</a>
+    
+    
+    </nav>
+   
+   <button id="sign"><a href="LOGIN.HTML">Sign In </a></button>
+   <div class="profile" id="profile">
+    <a href="PROFILE.HTML"><img src="Image9.jpg" alt="profile photo" id="profileImg" ></a>
+   </div>
+   
+   
+   </header>
+   
+    <form action="">
+        <h2>BOOK ROOM</h2>
+        <fieldset>
+            <fieldset>
+                <legend>NAME <SUP>*</SUP></legend>
+                <input type="text" name="name" id="name" placeholder="Enter your full name" >
+    
+            </fieldset>
+            <fieldset>
+            <legend>ID / PASSPORT <SUP>*</SUP></legend>
+            <input type="text" name="passport" id="passport" placeholder="Passport / ID number " >
+            
+            </fieldset>
+            <fieldset>
+                <legend>PHONE NUMBER <sup>*</sup></legend>
+                <input type="tel" aria-readonly="true" name="phone" id="phone" placeholder="Phone number" >
+                
+                </fieldset>
+                <fieldset>
+                <legend>HOUSE NUMBER <sup>*</sup></legend>
+                <input type="text"   name="room" id="room" placeholder="House number" >
+                
+                
+                </fieldset>
+    
+                <fieldset>
+                <legend id="pay">DEPOSIT AMOUNT <SUP>*</SUP></legend>
+                <input type="text" name="amount" id="amount" placeholder="Amount in KSH" >
+                
+                </fieldset>
+                <fieldset>
+                <label for="mode">PAYMENT MODE :</label><select name="mode" id="mode">
+                <option value=""></option>
+                <option value="mpesa">M-PESA</option>
+                <option value="card">CARD</option>
+                <option value=""></option>
+                
+                </select>
+                
+                </fieldset>
+                
+        </fieldset>
+        <button  id="post">BOOK NOW</button>
+    
+    
+    
+    </form>  
+    
+   
+    
+    
+    
+    <script>
+    const next=document.getElementById("post");
+    next.addEventListener("click",(e)=>{
+        e.preventDefault();
+        const name=document.getElementById("name").value;
+        const passport=document.getElementById("passport").value;
+        const phone=document.getElementById("phone").value;
+        const room=document.getElementById("room").value;
+        const amount=document.getElementById("amount").value;
+        const mode=document.getElementById("mode").value;
+        
+        
+        localStorage.setItem("name",JSON.stringify(name));
+        localStorage.setItem("passport",JSON.stringify(passport));
+        localStorage.setItem("phone",JSON.stringify(phone));
+        localStorage.setItem("room",JSON.stringify(room));
+        localStorage.setItem("amount",JSON.stringify(Number(amount)));
+        const log=localStorage.getItem("loggedInUser");
+        
+        
+        if(name && passport && phone ){
+          
+          
+          if (log){
+          
+            if(mode==="mpesa"){
+                
+             let p=  prompt("Enter M-PESA number");
+                if(p){
+                let pt=  prompt("Enter M-PESA PIN");
+                    if(pt){
+                        alert("Booking successful");
+                        window.location.href="PROFILE.HTML";
+                        
+                    }
+                    else{
+                        alert("Payment canceled. ");
+                    }
+                }
+        else{
+        alert("Payment canceled.");
+        }
+            }
+            else if(mode==="card"){
+                let c= prompt("Enter Card number");
+                if(c){
+                    let cv= prompt("Enter CVV");
+                    if(cv){
+                        alert("Booking successful");
+                        window.location.href="PROFILE.HTML";
+                    
+                    }
+                    else{
+                        alert("Payment canceled.");
+                    }
+                }
+                else{
+                    alert("Payment canceled. ");
+                }
+             }
+        else{
+            alert("Please select a payment mode");
+            
+            
+        }
+        
+            }
+            else{
+                alert("You can not book room if you have not logged in.\n Please log in first. ");
+                window.location.href="LOGIN.HTML";
+            }
+        
+        
+        
+        }
+        else{
+            alert("Please fill in all the required fields.");
+        
+        }
+        
+        
+        
+        
+        const room1=localStorage.getItem("room");
+        
+        const roomNo=JSON.parse(room1);
+        room1.inerrText=roomNo;
+    })
+    
+   
+    
+    const dp = document.getElementById("profile");
+const sign = document.querySelector("#sign");
+
+const logg = localStorage.getItem("loggedInUser");
+const pass1 = localStorage.getItem("password1");
+const pass = localStorage.getItem("password");
+
+function showDp() {
+    if (pass && pass1) {
+        dp.style.display = "block";
+        sign.style.display = "none";
+    } else {
+        dp.style.display = "none";
+        sign.style.display = "block";
+    }
+}
+
+window.onload = showDp;
+
+    
+    
+    
+   
+    
+    </script>
+    
+</body>
+</html>   

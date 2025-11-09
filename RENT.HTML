@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rent payment</title>
+<style>
+    
+   body{
+            
+        padding: 0;    
+        margin: 0;
+        background-blend-mode: multiply;
+        align-items: center;
+        display: flex   ;
+        flex-direction: column;
+        height: 100vh;
+        margin-top: 0;
+        padding-top: 0;    
+        transition: all 0.8s ease-in-out;
+        background-image: ();
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;        
+        background:linear-gradient(to bottom,#150b31,#200b09);
+
+        }
+        form {
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 40%;
+            background:linear-gradient(to left,#0f0f50,#564979);
+            padding: 1rem;
+            align-items: center;
+            box-sizing: 0 0 15px;
+            animation: glow 2s infinite alternate;
+            transition: all 0.8s ease-in-out;
+            backdrop-filter: blur(40px);    
+
+
+        }
+        h2{
+            text-align: center;
+            color: linear-gradient(to right, #c92b7a, #f80303);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2rem;
+        
+        
+        }
+        fieldset{
+            border: none;
+            margin-bottom: 0;
+            padding: 0;
+        
+        
+        }
+        input{
+            width: 90%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 1rem;
+        
+        
+        }
+        select{
+            width: 50%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 1rem;
+        
+        }
+        header{
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to left,#28273d,#0f1720);           box-sizing: border-box;
+            margin-bottom: 2rem;
+            
+            margin-top: 0;
+            position: relative;
+            height: 20%;
+            border: none;
+            background-blend-mode: multiply;
+            
+        
+        }
+        nav a{
+            color: #000;
+            text-decoration: none;
+            margin: 1rem;
+            font-size: 1rem;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            padding: 0rem 3rem;
+        
+        }
+        nav a:hover{
+            text-decoration: underline;
+        
+        
+        }        
+       nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 0.625rem;
+            width: 50%;
+            margin-left: 25%;            
+            
+
+        }
+        #back{
+            padding: 0.5rem ;
+            margin: 0.5rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #7226FF;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 4px ;
+            
+            
+        
+        }
+        #back:hover{
+            background-color: #010030;
+        
+        
+        }        
+        sup{
+            color: red;
+        
+        
+        }
+        #next{
+            padding: 0.5rem ;
+            margin: 0.5rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #1101f1;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 4px ;
+            
+            
+        
+        }
+        #next:hover{
+            background-color: #0375f8;
+        
+        
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #60643f, 0 0 15px #3b5320, 0 0 30px #05c6f7;
+            }
+            to {
+                box-shadow: 0 0 20px #362438, 0 0 40px #5e385a, 0 0 60px #da03ee;
+            }
+        }
+        @media (max-width: 768px) {
+            form {
+                width: 80%;
+            }
+            nav {
+                width: 80%;
+                padding:0;
+                margin-left: 8.5%;
+                height: 2.5rem;
+                margin-top: 1rem;
+            
+            }
+            nav a {
+                font-size: 0.9rem;
+                
+                padding: 0.5rem 1rem;
+            
+            }
+             #sign{
+    margin-left: 85%;
+    font-size: 10px;
+     margin-top: -1rem;       
+
+}
+            
+            
+        }
+        
+     #sign{
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #03b0f5;
+    color: white;
+    border: none;
+    border-radius: 0.925rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 5px #03b0f5;
+     right: 1rem;
+        top: 3.2rem;
+        padding: 0.2rem;
+        
+
+}   
+    
+.profile{
+    margin-left: 92%;
+    margin-top: -1.82rem;
+    margin-bottom: 1rem;
+    width: 2rem;    
+    height: 2rem;
+    overflow: hidden;
+    border-radius: 50%;
+
+
+
+}
+image{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%; 
+    object-fit: cover;
+    overflow: hidden;
+
+}    
+        
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="BOOK.HTML">Book</a>
+    <a href="RENT.HTML">Pay</a>
+    <a href="HOUSE.HTML">House</a>
+    
+    
+    </nav>
+    
+    <button id="sign"><a href="LOGIN.HTML">Sign In </a></button>
+    
+    <div class="profile" id="profile">
+    <a href="PROFILE.HTML"><img src="Image9.jpg" alt="profile photo" id="profileImg" ></a>
+   </div>
+    
+    </header>
+    
+    <form action="">
+    <h2>MONTHLY RENT PAYMENT</h2>
+    <fieldset>
+    <fieldset>
+    <legend>ROOM NUMBER <sup>*</sup></legend>
+    <input type="text" name="room" id="door" placeholder="Room Number">
+            
+    </fieldset>
+    <fieldset>
+    <legend>FLOOR NUMBER <sup>*</sup></legend>
+    <input type="text" name="floor" id="floor" placeholder="Floor Number">
+    
+    </fieldset>
+    <fieldset>
+    <legend>AMOUNT <sup>*</sup></legend>
+    <input type="currency" name="amount" id="amount" placeholder="Amount in KSH">
+    
+    </fieldset>
+    <fieldset>
+    <label for="mode">PAYMENT MODE :</label><select name="mode" id="mode" >
+    <option value=""></option>
+    <option value="mpesa">MPESA</option>
+    <option value="card">DEBIT / CREDIT CARD</option>
+    <option value=""></option>
+    </select>
+    
+    </fieldset>
+    </fieldset>
+    <button id="back">Back</button>
+    <button id="next">Next</button>
+    
+    
+    
+    </form>
+    
+    <script>
+     const dp = document.getElementById("profile");
+const sign = document.querySelector("#sign");
+
+const logg = localStorage.getItem("loggedInUser");
+const pass1 = localStorage.getItem("password1");
+const pass = localStorage.getItem("password");
+
+function showDp() {
+    if (pass && pass1) {
+        dp.style.display = "block";
+        sign.style.display = "none";
+    } else {
+        dp.style.display = "none";
+        sign.style.display = "block";
+    }
+}
+
+window.onload = showDp;
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>
